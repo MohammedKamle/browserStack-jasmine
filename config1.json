@@ -1,0 +1,18 @@
+{
+    "Devices": [
+        {
+            "deviceID": "device1",
+            "OS_VERSION": "10",
+            "BROWSERNAME": "Chrome",
+            "BROWSER_VERSION": "88",
+            "OS": "Windows"
+        },
+        {
+            "deviceID": "device2",
+            "OS_VERSION": "Big Sur",
+            "BROWSERNAME": "Firefox",
+            "BROWSER_VERSION": "77.0",
+            "OS": "OS X"
+        }
+    ]
+}
