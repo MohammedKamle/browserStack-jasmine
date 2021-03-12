@@ -15,7 +15,7 @@ describe('Sample Tests', function () {
             'name': process.env.NAME, // test name  
             'build': process.env.BUILD // CI/CD job or build name
         }
-
+        console.log("Test spec2 initiated");
         var remoteHub = 'http://mohammedk1:spBCpUJaVTnvxxssFtEJ@hub-cloud.browserstack.com/wd/hub';
 
         this.driver = new selenium.Builder().
