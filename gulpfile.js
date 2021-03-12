@@ -48,7 +48,7 @@ var env = require('gulp-env');
 //         process.env.BROWSERNAME = d.BROWSERNAME;
 //         process.env.BROWSER_VERSION = d.BROWSER_VERSION;
 //         process.env.OS = d.OS;
-//         process.env.NAME = "InterviewKickStart -Sample Test ";
+//         process.env.NAME = `InterviewKickStart -Sample Test with device ${d.deviceID}`;
 //         process.env.BUILD = "InterviewKickStart -Sample Build";
 //         console.log(d.deviceID);
 //         console.log(d.BROWSERNAME)
@@ -81,7 +81,7 @@ var env = require('gulp-env');
 //         process.env.BROWSERNAME = d.BROWSERNAME;
 //         process.env.BROWSER_VERSION = d.BROWSER_VERSION;
 //         process.env.OS = d.OS;
-//         process.env.NAME = "InterviewKickStart -Sample Test ";
+//         process.env.NAME = `InterviewKickStart -Sample Test with  ${d.deviceID}`;
 //         process.env.BUILD = "InterviewKickStart -Sample Build";
 //         return gulp.src([
 //             'tests/*.spec.*'
@@ -109,7 +109,7 @@ for (let i = 0; i < defaultTasks.length; i++) {
         process.env.BROWSERNAME = d.BROWSERNAME;
         process.env.BROWSER_VERSION = d.BROWSER_VERSION;
         process.env.OS = d.OS;
-        process.env.NAME = "InterviewKickStart -Sample Test ";
+        process.env.NAME = `InterviewKickStart -Sample Test with device ${d.deviceID}`;
         process.env.BUILD = "InterviewKickStart -Sample Build";
         await gulp.src([
             'tests/*.spec.*'
