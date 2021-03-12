@@ -3,7 +3,7 @@ selenium = require('selenium-webdriver');
 var SeleniumServer = require('selenium-webdriver/remote').SeleniumServer;
 jasmine.getEnv().defaultTimeoutInterval = 60000; // in microseconds.
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
-describe('Sample Tests', function () {
+describe('Sample Test 2', function () {
 
     beforeEach(function (done) {
 
