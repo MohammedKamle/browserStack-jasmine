@@ -102,7 +102,7 @@ let defaultTasks = data.Devices;
 console.log(defaultTasks.length);
 for (let i = 0; i < defaultTasks.length; i++) {
 
-    gulp.task(defaultTasks[i].deviceID, async function () {
+    gulp.task("default", async function () {
         let d = defaultTasks[i];
         console.log(d.length);
         process.env.OS_VERSION = d.OS_VERSION;
