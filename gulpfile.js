@@ -15,18 +15,18 @@ function createTask(key) {
     process.env.OS = device.os;
     process.env.BUILD_ID = key;
     console.log("Executing Task for Device : " + JSON.stringify(device));
-  });
     return gulp.src(["tests/*.browser.*"])
       .pipe(print(filepath => `test: ${filepath}`))
-      // .pipe(jasmine());
-      .pipe(jasmine_parallel({
-            concurrency_value: 2,
-            jasmine_opts: {
-                verbose: true,
-                includeStackTrace: true,
-                errorOnFail: false
-            }
-        }));
+      .pipe(jasmine());
+      // .pipe(jasmine_parallel({
+      //   concurrency_value: 2,
+      //   jasmine_opts: {
+      //     verbose: true,
+      //     includeStackTrace: true,
+      //     errorOnFail: false
+      //   }
+      // }));
+  });
 }
 
 let defaultTasks = []
@@ -36,6 +36,7 @@ for (let d in devices) {
 }
 
 exports.default = gulp.series(defaultTasks);
+// exports.default = gulp.parallel(defaultTasks);
 
 // let defaultTasks = data.Devices;
 // console.log(defaultTasks.length);
