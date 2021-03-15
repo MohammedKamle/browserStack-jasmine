@@ -3,6 +3,10 @@ selenium = require('selenium-webdriver');
 var SeleniumServer = require('selenium-webdriver/remote').SeleniumServer;
 jasmine.getEnv().defaultTimeoutInterval = 60000; // in microseconds.
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
+const username = process.env.BROWSERSTACK_USER;
+const accessKey = process.env.BROWSERSTACK_ACCESSKEY;
+const remoteHubUrl = `https://${username}:${accessKey}@hub-cloud.browserstack.com/wd/hub`;
+
 describe('Sample Test 2', function () {
 
     beforeEach(function (done) {
@@ -12,14 +16,13 @@ describe('Sample Test 2', function () {
             'browserName': process.env.BROWSERNAME,
             'browser_version': process.env.BROWSER_VERSON,
             'os': process.env.OS,
-            'name': process.env.NAME, // test name  
+            'name': process.env.NAME, // test name
             'build': process.env.BUILD // CI/CD job or build name
         }
-        console.log("Test spec2 initiated");
-        var remoteHub = 'http://mohammedk1:spBCpUJaVTnvxxssFtEJ@hub-cloud.browserstack.com/wd/hub';
+        console.log("Test spec2 initiated with URL :: "+ remoteHubUrl + " CAPS :: " + JSON.stringify(caps));
 
         this.driver = new selenium.Builder().
-            usingServer(remoteHub).
+            usingServer(remoteHubUrl).
             withCapabilities(caps).
             build();
 
