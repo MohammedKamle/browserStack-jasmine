@@ -12,3 +12,5 @@ const caps = {
   'build': process.env.BUILD // CI/CD job or build name
 }
 console.log("Test spec1 initiated with URL :: "+ remoteHubUrl + " CAPS :: " + JSON.stringify(caps));
+
+// Add the code here to run the jasmine tests using the jasmine node module
