@@ -6,9 +6,10 @@ const username = process.env.BROWSERSTACK_USER;
 const accessKey = process.env.BROWSERSTACK_ACCESSKEY;
 const remoteHubUrl = `https://${username}:${accessKey}@hub-cloud.browserstack.com/wd/hub`;
 
+
 describe('Sample Test 1', function () {
 
-    beforeEach(function (done) {
+    beforeEach(function (done) {     
 
         const caps = {
             'os_version': process.env.OS_VERSION,
